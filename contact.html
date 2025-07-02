@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Great Oak Insurance Contact</title>
+    <style>
+    html {
+      background-color: white;
+      ;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    
+        
+        
+        a { color:darkblue;}
+    #container1 {
+            width:auto;
+            height: auto;
+            padding: 20px;
+        }
+        
+    section {
+      padding: 20px;
+      max-width: 1900px;
+      margin: auto;
+      text-align: center;
+    }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px 40px;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled #logo {
+  filter: invert(1) brightness(0.2);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; 
+  max-width: 100%;  
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  padding: 14px 16px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    
+   #footer1 {
+  background-color: black;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 0.9rem;
+}
+
+  #footer2 {
+  background-color: black;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 0.9rem;
+}      
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+.footer-container1 {
+    max-height: 220px;
+}
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-column a {
+  color: #ffcccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #b3b3b3;
+  text-align: center;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: auto;
+}
+        .footer-bottom a {
+            color: #ffcccc;
+        }
+#logo {
+    width: 180px;
+    height: auto;
+    filter: invert(1) brightness(0.2);
+    
+}
+#logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps aspect ratio */
+}
+    @media (max-width: 600px) {
+      #map-location {
+        flex-direction: column;
+      }
+    }
+        
+#locations-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.address-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.address-box {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.address-box a {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.map-wrapper {
+  max-width: 100%;
+  padding: 0 20px;
+}
+        
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #logo {
+    width: 140px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 1rem;
+    width: 100%;
+  }
+    #section1 {
+        margin-top: 120px;
+    }
+}
+        
+        
+        
+        .marquee-outer {
+  overflow: hidden;
+  position: relative;
+  height: 200px; /* adjust based on final logo size */
+
+margin-left: 80px;
+    margin-right:80px;
+}
+
+.marquee-inner {
+  display: flex;
+  animation: scroll-left 100s linear infinite;
+  gap: 40px; /* space between logos */
+  align-items: center; /* vertically center logos */
+ min-width: 30000px;
+height: 200px;
+    background-color: white;
+}
+
+.marqimg {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marqimg img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.
+.rt-logo{
+    width: 250px !important;
+    height: auto !important;
+}
+.next-logo{
+    padding-top: 10px;
+  width: 250px !important;
+  height: auto !important;
+}
+.a-logo {
+    width:330px !important;
+    height: auto !important;
+}
+.b-logo {
+    width:300px !important;
+    height: auto !important;
+}
+.c-logo {height: 150px !important;
+width:240px !important;}
+
+  </style>
+</head>
+<body>
+ <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div id="logo"><img src="objects/GreatOaks_LogoRebuild_white.webp" style="width: 180px; height: auto;"></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="about.html">About</a>
+      </div>
+    </div>
+  </nav>
+    <section class="fade-in" id="section1" style="padding-left:20%; padding-right:20%;">
+    <h1>Let’s Find the Perfect Insurance for You!</h1>
+<br>
+<p>
+    At our brokerage, we believe the best coverage starts with understanding you; your goals, your concerns, and what matters most to you so that you have peace of mind. To create a personalized quote just for you, simply reach out.  Email me directly at <a href="mailto:bethahotaling@yahoo.com">bethahotaling@yahoo.com</a> to share your story, or give us a call at 443-400-5200 and leave a message and we’ll get right back to you to schedule a convenient time to chat.
+</p>
+    <p>A quick conversation is all it takes to ensure your insurance is tailored to your unique needs. We look forward to helping you find the best protection at the most competitive rates—just the way you deserve. Let’s get started today!</p>
+    
+</section>
+<section class="fade-in" id="locations-section">
+  <div class="address-container">
+    <div class="address-box">
+      <h3>Baltimore Office</h3>
+      <p>
+        1340 Smith Avenue<br>
+        Suite 200<br>
+        Maryland, 21209<br>
+        <a href="https://www.google.com/maps?cid=14737803496081797109" target="_blank">View on Google Maps</a>
+      </p>
+    </div>
+    <div class="address-box">
+      <h3>Sparks Glencoe Office</h3>
+      <p>
+        15 Rainflower Path<br>
+        Sparks Glencoe,<br>
+        Maryland 21152<br>
+        <a href="https://www.google.com/maps?cid=14868119670719366890" target="_blank">View on Google Maps</a>
+      </p>
+    </div>
+  </div>
+
+  <!--
+<div class="map-wrapper">
+      
+<iframe src="https://www.google.com/maps/d/u/1/embed?mid=1-jlsXC0GrSsu-SqOdetrscUO37o77sI&ehbc=2E312F&noprof=1" width="50%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div> 
+
+-->
+    <section id="contact" class="fade-in">
+         <h2>Some of Our Carriers
+        </h2>
+     <div class="marquee-outer">
+          <div class="marquee-inner">
+       <!-- first run -->
+    <div class="marqimg"><img src="objects/Allstate-Logo.wine.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/American-Automobile-Association-Logo.png"></div>
+    <div class="marqimg"><img src="objects/Geico_logo.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/mobilelogoaic.png"></div>
+    <div class="marqimg"><img src="objects/rt.png" class="rt-logo"></div>
+    <div class="marqimg"><img src="objects/uniprop.png" ></div>
+    <div class="marqimg"><img src="objects/Tapco-TransparentBackground_vectorized.png" class="next-logo"></div>
+     <div class="marqimg"><img src="objects/next.png" class="next-logo"></div>
+    <div class="marqimg"><img src="objects/National-General.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/IWonly_wsubline_LOGOS.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/travelers-2.webp" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Mutual-of-Omaha-logo.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Pacific-Life-Logo.jpg" class="c-logo"></div>
+    <div class="marqimg"><img src="objects/nationwide1.png" class="c-logo"></div>
+    <!-- 2nd run -->
+   <div class="marqimg"><img src="objects/Allstate-Logo.wine.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/American-Automobile-Association-Logo.png"></div>
+    <div class="marqimg"><img src="objects/Geico_logo.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/mobilelogoaic.png"></div>
+    <div class="marqimg"><img src="objects/rt.png" class="rt-logo"></div>
+    <div class="marqimg"><img src="objects/uniprop.png" ></div>
+    <div class="marqimg"><img src="objects/Tapco-TransparentBackground_vectorized.png" class="next-logo"></div>
+     <div class="marqimg"><img src="objects/next.png" class="next-logo"></div>
+    <div class="marqimg"><img src="objects/National-General.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/IWonly_wsubline_LOGOS.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/travelers-2.webp" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Mutual-of-Omaha-logo.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Pacific-Life-Logo.jpg" class="c-logo"></div>
+    <div class="marqimg"><img src="objects/nationwide1.png" class="c-logo"></div> <div class="marqimg"><img src="objects/Allstate-Logo.wine.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/American-Automobile-Association-Logo.png"></div>
+    <div class="marqimg"><img src="objects/Geico_logo.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/mobilelogoaic.png"></div>
+    <div class="marqimg"><img src="objects/rt.png" class="rt-logo"></div>
+    <div class="marqimg"><img src="objects/uniprop.png" ></div>
+    <div class="marqimg"><img src="objects/Tapco-TransparentBackground_vectorized.png" class="next-logo"></div>
+     <div class="marqimg"><img src="objects/next.png" class="next-logo"></div>
+    <div class="marqimg"><img src="objects/National-General.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/IWonly_wsubline_LOGOS.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/travelers-2.webp" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Mutual-of-Omaha-logo.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Pacific-Life-Logo.jpg" class="c-logo"></div>
+    <div class="marqimg"><img src="objects/nationwide1.png" class="c-logo"></div>
+    <!-- 2nd run -->
+   <div class="marqimg"><img src="objects/Allstate-Logo.wine.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/American-Automobile-Association-Logo.png"></div>
+    <div class="marqimg"><img src="objects/Geico_logo.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/mobilelogoaic.png"></div>
+    <div class="marqimg"><img src="objects/rt.png" class="rt-logo"></div>
+    <div class="marqimg"><img src="objects/uniprop.png" ></div>
+    <div class="marqimg"><img src="objects/Tapco-TransparentBackground_vectorized.png" class="next-logo"></div>
+     <div class="marqimg"><img src="objects/next.png" class="next-logo"></div>
+    <div class="marqimg"><img src="objects/National-General.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/IWonly_wsubline_LOGOS.png" class="b-logo"></div>
+    <div class="marqimg"><img src="objects/travelers-2.webp" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Mutual-of-Omaha-logo.png" class="a-logo"></div>
+    <div class="marqimg"><img src="objects/Pacific-Life-Logo.jpg" class="c-logo"></div>
+    <div class="marqimg"><img src="objects/nationwide1.png" class="c-logo"></div>
+         </div>
+         </div>
+  </section>
+</section>
+  <!-- Contact Info Section -->
+  <section class="fade-in" id="contact-info">
+    <div id=container1>  
+    <h2>Contact Information</h2>
+    <p>
+      <strong>Email:</strong> bethahotaling@yahoo.com<br>
+      <strong>Phone:</strong> (443) 400-5200<br>
+      <strong>Social Media:</strong><br>
+      <a href="https://www.facebook.com/people/Great-Oak-Insurance-Group/100057667569107/#" target="_blank">Facebook</a> |
+      <a href="https://www.linkedin.com/in/beth-hotaling-40385445" target="_blank">LinkedIn</a>
+    </p>
+      </div>
+  </section>
+
+  <!-- Footer -->
+      
+ <footer id="footer1">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Baltimore Office</h3>
+      <p>Great Oak Insurance Group</p>
+      <p>1340 Smith Avenue, Suite 200, Baltimore, Maryland 21209</p>
+      <p>Phone: (443) 400-5200</p>
+      <p>Fax: (443) 400-0515</p>
+      <p>Hours: Mon-Fri: 10:00am-6:00pm</p>
+      <a href="https://www.google.com/maps?cid=14737803496081797109">Google Maps</a>
+    </div>
+
+      <div class="footer-column">
+      <h3>Sparks Glencoe Office</h3>
+      <p>Great Oak Insurance Group</p>
+      <p>15 Rainflower Path, Sparks Glencoe, MD 21152</p>
+      <p>Phone:  (443) 400-5200</p>
+      <p>Fax: (443) 400-0515</p>
+      <p>Hours: Mon-Fri: 10:00am-6:00pm</p>
+      <a href="https://www.google.com/maps?cid=14868119670719366890">Google Maps</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home Page</a>    
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="reviews.html">Customer Reviews</a>
+      
+    </div>
+
+    <div class="footer-column">
+      <h3>Connect With Us</h3>
+      <a href="https://www.facebook.com/people/Great-Oak-Insurance-Group/100057667569107/#" target="_blank">Facebook</a><br>
+      <a href="https://www.linkedin.com/in/beth-hotaling-40385445" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+      
+     <p>
+      Great Oak Insurance group provides auto, home, life, landlord and business insurance to all of Maryland including Baltimore, Baltimore County, Carroll County, Finksburg, Sykesville, Towson, Mount Washington, Roland Park, Parkton, New Freedom, Fallston, Jarrettsville, Bel Air, Jacksonville, Kingsville, Glen Arm, Cockeysville, White Hall, Westminster, Hunt, Valley, Sparks and Sparks Glencoe, and to all of Pennsylvania, Virginia, Delaware, Colorado and Florida.
+    </p>
+  </div>
+</footer>
+    
+   <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1-jlsXC0GrSsu-SqOdetrscUO37o77sI&ehbc=2E312F&noprof=1" width="100%" height="480"></iframe>
+     <footer id="footer2">
+  <div class="footer-container1">
+    <div class="footer-bottom">
+       <div class="footer-bottom">
+        <p>This website was made by <strong>SavepointWebsites.</strong>. Email us at <a href="mailto:savepointwebsites@gmail.com">savepointwebsites@gmail.com</a> for help developing your own website.</p>
+    </div>
+    </div>
+      <div class="footer-bottom">
+      
+        <p style="font-size: 13px;">Photography by <strong>Patrick Gillespie.</strong> See more of his work on Patrick's <a href="https://patrickgillespie.com/">Website</a> or on <a href="https://www.flickr.com/people/40423570@N07/">Flickr</a> business inquries can be sent to <a href="mailto:patorjk@gmail.com">patorjk@gmail.com</a></p>
+        
+    </div>
+         </div>
+    </footer>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+    </script>    
+         
+</body>
+</html>

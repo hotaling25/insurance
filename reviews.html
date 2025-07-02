@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Great Oak Insurance Reviews</title>
+  <style>
+   html {background-color:white;}
+      
+      body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+      #subtitle { 
+  margin: auto;
+  text-align: center;
+    
+  color: #333;}
+    .section {
+      padding: 4em 2em;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2em;
+    }
+
+    .review-card {
+      background-color: #fff;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .review-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .stars {
+      color: gold;
+      margin-bottom: 0.5em;
+      font-size: 1.2em;
+    }
+
+    .review-card p {
+      margin: 0.5em 0;
+      font-family: 'Helvetica Neue', sans-serif;    
+    }
+
+    .review-card small {
+      color: #555;
+      display: block;
+      margin-top: 0.5em;
+    }
+
+    .review-card a {
+      text-decoration: none;
+      color: #0070f3;
+      font-size: 0.9em;
+      display: inline-block;
+      margin-top: 0.5em;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 3em;
+      font-size: 1rem;
+      text-decoration: none;
+      color: #0070f3;
+    }
+      
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px 40px;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar #logo {
+  filter: invert(1) brightness(0.2);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 80px;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap; 
+  max-width: 100%;  
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  padding: 14px 16px;
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+      
+      #footer1 {
+  background-color: black;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 0.9rem;
+}
+
+  #footer2 {
+  background-color: black;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 0.9rem;
+}      
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 20px;
+}
+.footer-container1 {
+    max-height: 220px;
+}
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.footer-column a {
+  color: #ffcccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #b3b3b3;
+  text-align: center;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: auto;
+}
+       .footer-bottom a {
+            color: #ffcccc;
+        }
+      
+      
+      @media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #logo {
+  display: 120px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 1rem;
+    width: 100%;
+  }
+          #section1 {
+              margin-top:120px;
+          }
+}
+      
+      .qr-review-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 3em auto;
+  flex-wrap: wrap; /* makes them stack on mobile */
+  max-width: 800px;
+  text-align: center;
+}
+
+.qr-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+
+.qr-block img {
+  width: 200px;
+  height: auto;
+  margin-top: 1em;
+}
+
+.qr-block a {
+  color: #0070f3;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.qr-block a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+      <div id="logo"><img src="objects/GreatOaks_LogoRebuild_white.webp" style="width: 180px; height: auto;"></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About
+        <i class="fa fa-caret-down"></i></a>
+       
+        <div class="dropdown">
+        <a href="contact.html">Get a Quote / Contact</a>
+        </div>
+          </div>
+      </div>
+  </nav>
+  <div class="section" id="section1">
+    <h1 style="align-content: center">Client Testimonials</h1>
+      <p id="subtitle">Please view all our reviews on Google at <a href="https://www.google.com/search?sca_esv=6cf83e9191071241&sxsrf=AE3TifP-GP5ZE5oY1MaLtNwyqGE5Rc4tKA:1748969164683&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyW4hP70mN49vHimpSLeVvdNBWOLkIAR4ubMi825WYdWlGLjH6-M5kCncQCrgScJbzTTlkMqmXn3VKjRDvGdMK-HxoR_MnAdZoLW8IY7lIsZc8gkyQ%3D%3D&q=Great+Oak+Insurance+Group+Reviews&sa=X&ved=2ahUKEwjoz6Lu2dWNAxV-l4kEHVnfA4cQ0bkNegQILxAE&biw=1280&bih=585&dpr=1.5">“Great Oak Insurance group 21209”</a> or <a href="https://www.google.com/search?sca_esv=376515ea2f3c850f&sxsrf=AE3TifPGMeH-pE3TVTFesA2pxJbBZ8dJ7g:1749831399515&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1QSC_SmPNpWEorBx74OdHHpDcRSvtPAhjvSPorCjUtnm8xcodDKt58SQzk1vh9dv1Lj5qTipfkdpjyrwAbqzLwKtajbfiLLS77kCW8NiblR6mdXXQ%3D%3D&q=Great+Oak+Insurance+Group+Reviews&sa=X&ved=2ahUKEwjpqfD35e6NAxUhhIkEHRk-HJoQ0bkNegQIJRAE&biw=1920&bih=991&dpr=1">"Great Oak Insurance group 21152"</a></p>
+     <div class="qr-review-container">
+  <div class="qr-block">
+    <h3>Leave a Review - Baltimore</h3>
+    <a href="https://g.page/r/CfUvdwkyMofMEAE/review" target="_blank">Write a Google Review</a>
+    <img src="objects/qr3.png" alt="QR Code - Baltimore Review" />
+  </div>
+  <div class="qr-block">
+    <h3>Leave a Review - Sparks Glencoe</h3>
+    <a href="https://search.google.com/local/writereview?placeid=ChIJw_RPXF8NyIkR6sY52xAsVs4" target="_blank">Write a Google Review</a>
+    <img src="objects/qr-code-71765715.png" alt="QR Code - Sparks Review" />
+  </div>
+</div>
+        
+   <div class="reviews-grid">
+
+      <div class="review-card">
+        <p class="stars">★★★★★</p>
+          <p>"Beth is fantastic. In one hour, she explained to me more about insurance coverage than I have learned from other agents over the past 55 years... Saved me about $400!!!"</p>
+          <small>- Anners, 2 weeks ago</small>
+            <br>
+            
+          <a href="https://g.co/kgs/zrqqsFr">Google Reviews</a>
+      </div>
+
+      <div class="review-card">
+        <p class="stars">★★★★★</p>
+          <p>"It was a pleasure working with Beth. The savings were great and so was the service... She made the process easy!"</p>
+          <small>- Jared Allen, 9 months ago</small>
+            <br>
+            
+          <a href="https://g.co/kgs/8hVfMbZ">Google Reviews</a>
+      </div>
+
+      <div class="review-card">
+        <p class="stars">★★★★★</p>
+          <p>"Beth has been great and just saved us over 1000 dollars by finding us new policies... Answered all of our questions."</p>
+          <small>- Melissa Somogyi, a year ago</small>
+            <br>
+            
+          <a href="https://g.co/kgs/quyRWH2">Google Reviews</a>
+      </div>
+    <div class="review-card"><p class="stars">★★★★★</p>
+          <p>"Beth is amazing! She has been our agent for 8 years now... Just this week, she helped us save $1,120!"</p>
+          <small>- Larry Lin, 6 months ago</small>
+            <br>
+            
+          <a href="https://g.co/kgs/YgDNHhY">Google Reviews</a>
+        </div>
+<div class="review-card">
+    <p class="stars">★★★★★</p>
+          <p>"Beth is the best insurance agent in the greater Baltimore area! She is very easy to work with and will definitely save you money."</p>
+          <small>- Luke Thortenson, 7 months ago</small>
+            <br>
+            
+          <a href="https://g.co/kgs/eS28Y4D">Google Reviews</a>
+        </div>
+     <div class="review-card">
+    <p class="stars">★★★★★</p>
+          <p>"Beth Hotaling has been our agent for the past 5 years... She is extremely knowledgeable, responds quickly and friendly. She recently helped our daughter get her first auto policy... We'll be using her for our next purchase."</p>
+          <small>- Tyree Spain, 3 years ago</small>
+            <br>
+            
+          <a href="https://www.google.com/maps/reviews/data=!4m5!14m4!1m3!1m2!1s104997827340140186070!2s0x89c80ff888faf823:0xcc87323209772ff5?ved=1t:31295&ictx=111">Google Reviews</a>
+        </div>
+    </div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
+  </div>
+    
+    
+     <footer id="footer1">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>Baltimore Office</h3>
+      <p>Great Oak Insurance Group</p>
+      <p>1340 Smith Avenue, Suite 200, Baltimore, Maryland 21209</p>
+      <p>Phone: (443) 400-5200</p>
+      <p>Fax: (443) 400-0515</p>
+      <p>Hours: Mon-Fri: 10:00am-6:00pm</p>
+      <a href="https://www.google.com/maps?cid=14737803496081797109">Google Maps</a>
+    </div>
+
+      <div class="footer-column">
+      <h3>Sparks Glencoe Office</h3>
+      <p>Great Oak Insurance Group</p>
+      <p>15 Rainflower Path, Sparks Glencoe, MD 21152</p>
+      <p>Phone:  (443) 400-5200</p>
+      <p>Fax: (443) 400-0515</p>
+      <p>Hours: Mon-Fri: 10:00am-6:00pm</p>
+      <a href="https://www.google.com/maps?cid=14868119670719366890">Google Maps</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home Page</a>    
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="reviews.html">Customer Reviews</a>
+      
+    </div>
+
+    <div class="footer-column">
+      <h3>Connect With Us</h3>
+      <a href="https://www.facebook.com/people/Great-Oak-Insurance-Group/100057667569107/#" target="_blank">Facebook</a><br>
+      <a href="https://www.linkedin.com/in/beth-hotaling-40385445" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+      
+    <p>
+      Great Oak Insurance group provides auto, home, life, landlord and business insurance to all of Maryland including Baltimore, Baltimore County, Carroll County, Finksburg, Sykesville, Towson, Mount Washington, Roland Park, Parkton, New Freedom, Fallston, Jarrettsville, Bel Air, Jacksonville, Kingsville, Glen Arm, Cockeysville, White Hall, Westminster, Hunt, Valley, Sparks and Sparks Glencoe, and to all of Pennsylvania, Virginia, Delaware, Colorado and Florida.
+    </p>
+  </div>
+</footer>
+    
+   <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1-jlsXC0GrSsu-SqOdetrscUO37o77sI&ehbc=2E312F&noprof=1" width="100%" height="480"></iframe>
+           <footer id="footer2">
+  <div class="footer-container1">
+    <div class="footer-bottom">
+        <p>This website was made by <strong>SavepointWebsites.</strong>. Email us at <a href="mailto:savepointwebsites@gmail.com">savepointwebsites@gmail.com</a> for help developing your own website.</p>
+    </div>
+      <div class="footer-bottom">
+      
+        <p style="font-size: 13px;">Photography by <strong>Patrick Gillespie.</strong> See more of his work on Patrick's <a href="https://patrickgillespie.com/">Website</a> or on <a href="https://www.flickr.com/people/40423570@N07/">Flickr</a> business inquries can be sent to <a href="mailto:patorjk@gmail.com">patorjk@gmail.com</a></p>
+    </div>
+         </div>
+    </footer>
+  <script>
+
+    const faders = document.querySelectorAll('.fade-in');
+
+const appearOnScroll = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+faders.forEach(fader => appearOnScroll.observe(fader));
+
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+    </script>    
+</body>
+</html>
